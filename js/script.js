@@ -5,7 +5,7 @@ var large={name:"large",cost:460};
 
 
 // crust 
-var crisfy={name:"crisy",cost:880};
+var cripsy={name:"cripsy",cost:880};
 var stuffed={name:"stuffed",cost:450};
 var gluttenFree={name:"glutten-free",cost:670};
 
@@ -16,10 +16,43 @@ var tomato={name:"tomato",cost:440};
 var onion={name:"onion",cost:850};
 
 var getSize=function(){
-    var y=$("select#wd option:selected").val();
+    var y=$("select#size option:selected").val();
     if(y=="small"){size=small}else
     if(y=="medium"){size=medium}else
     if(y=="large"){size=large}else
     console.log(size);
     return size;
+
 }
+var getCrust = function(){
+    var x = $("#crust option:selected").val();
+    if(x =="cripsy"){crust= cripsy}else
+    if(x == "stuffed"){crust = stuffed}else
+    if(x == "gluttenFree"){crust = gluttenFree}
+    console.log(crust);
+    return crust;
+}
+var getDelivery = function(){
+    var y = $("input[type=radio][name=delivery]:checked").val();
+    if(y =="yes"){cost = 500}else{
+        cost =0;
+    }
+    console.log(y);
+}
+
+$(document).ready(function(){
+
+    $("button[type=submit][name=submit]").click(function(e){
+        e.preventDefault();
+        getDelivery();
+    });
+
+
+
+
+
+
+
+
+
+});
