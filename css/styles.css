@@ -1,6 +1,7 @@
 body{
     background-image: url("../images/download.jpeg");
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 p{
     font-weight:bold ;

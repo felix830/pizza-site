@@ -15,7 +15,7 @@
       <div class="jumbotron">
 <h1>Felix Pizza Master</h1>
       </div>
-      <h1>ABOUT US</h1>
+      <h2>ABOUT US</h2>
       <p>This is the pizza site best for the best.At pizza site you get the chance to choose from various<br> flavous crust and toppings.We make sure you got the value for your money for every service.<br>We also got delivery services at the comfort of your palatial home.Delivery is on time and affordable. Welcome all my customers.</p>
        
       
@@ -26,16 +26,17 @@
         <div class="form-group">
             <label for="">Select Size</label>
             <select class="form-control" id="size">
-                <option value="small">Small</option>
+                <option id="small" value="small">Small</option>
                 <option value="medium">medium</option>
                 <option value="large">large</option>
+                <option value="mega">mega</option>
             </select>
         </div>  
 
         <div class="form-group">
           <label for="crust">Select Crust</label>
           <select class="form-control" id="crust">
-            <option value="cripsy">Crispy</option>
+            <option value="cripsy">Cripsy</option>
             <option value="stuffed">stuffed</option>
             <option value="gluttenFree">Glutten-free</option>
           </select>
@@ -44,7 +45,7 @@
 
           <div class="form-group">
             <label for="topping">Select Topping</label>
-            <select class="form-control">
+            <select class="form-control" id="topping">
                 <option value="mushroom">mushroom</option>
                 <option value="sausage">sausage</option>
                 <option value="tomato">tomato</option>
@@ -54,17 +55,18 @@
 
         <div class="form-group">
           <label for="number">Number Of Pizzas</label>
-          <input type="number" name="number" id="number" class="form-control" placeholder="Enter The Number of pizzas you need">
+          <input type="number" name="number" id="number" class="form-control" value="1">
         </div>
 
-        <div class="form-group checkbox">
-          <button type="button" id="delivery">delivery</button>
-          
-          </div>
 
         <div class="formgroup">
-          <button type="submit" name="submit" class="btn btn-success">Submit</button>
+          <button id="test" type="submit" name="submit" class="btn btn-success">Submit</button>
         </div>
+        <br>
+        <div class="form-group checkbox">
+          <button class="btn-danger" type="button" id="delivery">Delivery location</button>
+          
+          </div>
       </form>
 </div>
         
