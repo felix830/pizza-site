@@ -45,7 +45,34 @@ $(document).ready(function(){
     $("button[type=submit][name=submit]").click(function(e){
         e.preventDefault();
         getDelivery();
+
     });
+
+    $("#pizzaDetails").click(function() {
+        $("#pizzaDetail").toggle();
+        $("#deliver").toggle();
+        $("#pickup").toggle();
+        $("#checkout").hide();
+       
+        $("button#deliver").click(function(event){
+            event.preventDefault();
+            alert("Delivery cost is" + " " + del);
+            var location = prompt("Enter your address:");
+            alert("We will deliver your order at" + " " + location);
+            $("#checkout").show();
+        })
+
+        $("button#pickup").click(function(event){
+            event.preventDefault();
+            alert("Thank you for shopping with us!!!!!");
+            $("#checkout").show();   
+
+            $("button#checkout").click(function(event){
+                event.preventDefault();
+                alert( TotalPrice + 400);
+                $("#check").text(check);
+                // console.log(check);       
+    
 
 
 
